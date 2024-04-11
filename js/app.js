@@ -31,9 +31,13 @@ function validate() {
       monthIn.style.borderColor = "red";
       monthIn.querySelector("small").innerText = "Must be a valid month";
       validator = false;
-    } else if (dayIn > 31) {
+    } else if (dayIn.value > 31) {
       dayIn.style.borderColor = "red";
       dayIn.querySelector("small").innerText = "Must be a valid day";
+      validator = false;
+    } else if (yearIn.value > 2024) {
+      yearIn.style.borderColor = "red";
+      yearIn.querySelector("small").innerText = "Must be a valid year";
       validator = false;
     } else {
       i.style.borderColor = "black";
