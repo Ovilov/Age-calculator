@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #f0f0f0;
+  font-family: "Poppins", sans-serif;
+}
+.card {
+  width: 600px;
+  background-color: white;
+  border-radius: 24px 24px 200px 24px;
+}
+.container {
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+}
+.form__wrapper {
+  display: flex;
+  gap: 48px;
+}
+input {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  width: 100px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #f0f0f0;
+  &::placeholder {
+    font-size: 18px;
+    font-weight: 700;
+  }
+}
+.box {
+  display: flex;
+  flex-direction: column;
+}
+.box label {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.day {
+}
+.month {
+}
+.year {
+}
+.submit__box {
+  display: flex;
+  align-items: center;
+}
+.submit__box hr {
+  width: 100%;
+}
+.submit__box .submit__btn {
+  border-radius: 50%;
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #854dff;
+}
+.content h1 {
+  font-size: 104px;
+  line-height: 110%;
+  font-weight: 900;
+  letter-spacing: -2%;
+  font-style: italic;
+  height: fit-content;
+}
+.content span {
+  color: #854dff;
+}
+small {
+  color: red;
+}
+.YY {
+}
+.MM {
+}
+.DD {
+}
