@@ -21,15 +21,13 @@ const months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 function validate() {
   const inputs = document.querySelectorAll("input");
   let validator = true;
-  inputs.forEach((e) => {
-    const parent = e.parentElement;
-    if (!e.value) {
-      
-      e.style.borderColor = "red";
+  inputs.forEach((i) => {
+    const parent = i.parentElement;
+    if (!i.value) {
+      i.style.borderColor = "red";
       parent.querySelector("small").innerText = "This field is required";
       validator = false;
     } else if (monthIn.value > 12) {
-        console.log(1);
       monthIn.style.borderColor = "red";
       monthIn.querySelector("small").innerText = "Must be a valid month";
       validator = false;
@@ -38,7 +36,7 @@ function validate() {
       dayIn.querySelector("small").innerText = "Must be a valid day";
       validator = false;
     } else {
-      e.style.borderColor = "black";
+      i.style.borderColor = "black";
       parent.querySelector("small").innerText = "";
       validator = true;
     }
@@ -46,8 +44,8 @@ function validate() {
   return validator;
 }
 
-function handleSubmit(i) {
-  i.preventDefault();
+function handleSubmit(e) {
+  e.preventDefault();
   if (validate()) {
     if (dayIn.value > day) {
       day = day + months[month - 1];
